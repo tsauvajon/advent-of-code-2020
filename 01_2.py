@@ -1,3 +1,17 @@
+def solution():
+    looking_for = {}
+
+    for i in input:
+        if i in looking_for:
+            a, b = looking_for[i]
+            print(i, a, b, i * a * b)
+            break
+        
+        for j in input:
+            if i == j:
+                continue
+            looking_for[sum-i-j] = (i, j)
+
 sum = 2020
 input = [
     1714,
@@ -202,16 +216,4 @@ input = [
     1532
 ]
 
-looking_for = {}
-
-for i in input:
-    if i in looking_for:
-        a, b = looking_for[i]
-        print(i, a, b, i * a * b)
-        break
-    
-    for j in input:
-        if i == j:
-            continue
-        looking_for[sum-i-j] = (i, j)
-
+solution()

@@ -1,3 +1,13 @@
+def solution():
+    looking_for = {}
+
+    for i in input:
+        if i in looking_for:
+            print(i, looking_for[i], i * looking_for[i])
+            break
+            
+        looking_for[sum-i] = i
+
 sum = 2020
 input = [
     1714,
@@ -201,13 +211,5 @@ input = [
     1432,
     1532
 ]
-    
-looking_for = {}
 
-for i in input:
-    if i in looking_for:
-        print(i, looking_for[i], i * looking_for[i])
-        break
-        
-    looking_for[sum-i] = i
-
+solution()
